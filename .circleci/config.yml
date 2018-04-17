@@ -3,5 +3,6 @@ jobs:
   build:
     machine:
       docker_layer_caching: true
+    workdir: /home/
     steps:
       - run: docker build -t rsyslog:alpine .
