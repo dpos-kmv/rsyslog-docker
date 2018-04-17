@@ -5,4 +5,4 @@ jobs:
       docker_layer_caching: true
     steps:
       - checkout
-      - run: ls -la && docker build -t rsyslog:alpine .
+      - run: docker build -t rsyslog:alpine .
