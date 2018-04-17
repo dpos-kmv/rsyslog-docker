@@ -5,7 +5,6 @@ jobs:
       docker_layer_caching: true
     steps:
       - checkout
-      - run:
-          docker login rckkm $DOCKERHUB_AUTH  
-          docker build -t rckkm/rsyslog:alpine ./docker
-          docker push rckkm/rsyslog:alpine
+      - run: docker login rckkm $DOCKERHUB_AUTH  
+      - run: docker build -t rckkm/rsyslog:alpine ./docker
+      - run: docker push rckkm/rsyslog:alpine
