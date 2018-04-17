@@ -1,0 +1,7 @@
+version: 2
+jobs:
+  build:
+    machine:
+      docker_layer_caching: true
+    steps:
+      - run: docker build -t rsyslog:alpine .
