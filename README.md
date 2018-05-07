@@ -1,2 +1,2 @@
 # rsyslog-docker
-simple rsysog docker image
+simple rsyslog docker image
