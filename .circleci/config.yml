@@ -3,6 +3,8 @@ jobs:
   build:
     machine: true
     steps:
-      - run: docker login -u rckkm -p $DOCKERHUB_AUTH  
-      - run: docker build -t rckkm/rsyslog:alpine ./docker
-      - run: docker push rckkm/rsyslog:alpine
+      - checkout
+      - run: |
+              docker build -t dpos-kmv/rsyslog:alpine ./docker
+              echo $DOCKERHUB_AUTH | docker login -u $DOCKER_USER --password-stdin
+              docker push rckkm/rsyslog:alpine
